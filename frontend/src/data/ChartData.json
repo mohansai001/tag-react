@@ -1,0 +1,344 @@
+{
+    "Charts":
+    [
+      {
+    "type": "doughnut",
+    "title": "EC Overview",
+    "labels": ["Cloud", "App", "Data"],
+    "data": [0, 2, 0],
+    "colors": ["#ffc1cc", "#87ceeb", "#ffe135"],
+    "legendDisplay": true,
+    "legendPosition": "bottom"
+  },
+
+  
+  
+  {
+    "type": "bar",
+    "title": "Applicants per EC",
+    "labels": ["Cloud", "App", "Data"],
+    "data": [0, 2, 0],
+    "colors": ["#ffc1cc", "#ffa07a", "#ffe135"]
+  },
+  
+  {
+    "type": "doughnut",
+    "title": "App EC Overview",
+    "labels": [
+      "App Engineer - Front End",
+      "App Engineer - Backend",
+      "LCNC Platform Engineer",
+      "Integration Engineer"
+    ],
+    "data": [0, 2, 0, 0],
+    "colors": ["#cfc6e9", "#8ecae6", "#ffd6a5", "#90e0ef"],
+    "legendDisplay": true,
+    "legendPosition": "bottom"
+  },
+  {
+    "type": "bar",
+    "title": "App EC Job Roles",
+    "labels": [
+      "App Engineer - Front End",
+      "App Engineer - Backend",
+      "LCNC Platform Engineer",
+      "Integration Engineer"
+    ],
+    "data": [0, 2, 0, 0],
+    "colors": ["#cfc6e9", "#8ecae6", "#ffd6a5", "#90e0ef"]
+  }
+
+  
+],
+"StatsCards": [
+    { "count": 3, "label": "Applications" },
+    { "count": 1, "label": "Shortlisted" },
+    { "count": 2, "label": "Rejected" },
+    { "count": 1, "label": "Imocha Invite" },
+    { "count": 0, "label": "Imocha Completed" }
+  ],
+"LeadershipDashboard":
+  [
+    {
+  "title": "Leadership Dashboard",
+  "labels": [
+    "Prescreening",
+    "Technical L1",
+    "Technical L2",
+    "EC Fitment",
+    "Project Fitment",
+    "Client Interview",
+    "Shortlisted"
+  ],
+  "datasets": [
+    {
+      "label": "H",
+      "Email": "Halika.Aluru@valuemomentum.com",
+      "backgroundColor": "#7ddcff",
+      "data": [1, 0, 1, 0, 0, 0, 0]
+    },
+    {
+      "label": "MA",
+      "Email" : "MohanSai.Ande@valuemomentum.com",
+      "backgroundColor": "#8fffd7",
+      "data": [2, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "label": "AR",
+      "Email" : "Anuja.Rathee@valuemomentum.com",
+      "backgroundColor": "#ff9cfb",
+      "data": [3, 0, 1, 0, 0, 0, 0]
+    }
+  ]
+}
+
+],
+
+  
+  "tables": [
+    {
+      "title": "TAG Overview",
+      "searchPlaceholder": "Search by TAG Name",
+      "primaryColor": "#d8f7b7",
+      "columns": [
+        { "label": "TAG Name", "field": "tag" },
+        { "label": "Prescreening", "field": "prescreening" },
+        { "label": "Technical L1", "field": "technical_l1" },
+        { "label": "Technical L2", "field": "technical_l2" },
+        { "label": "EC Fitment", "field": "ec_fitment" },
+        { "label": "Project Fitment", "field": "project_fitment" },
+        { "label": "Client Interview", "field": "client_interview" },
+        { "label": "Shortlisted", "field": "shortlisted" }
+      ],
+      "rows": [
+        {
+          "tag": "Anuja Rathee",
+          "prescreening": 2,
+          "technical_l1": 1,
+          "technical_l2": 0,
+          "ec_fitment": 0,
+          "project_fitment": 0,
+          "client_interview": 0,
+          "shortlisted": 0
+        },
+        {
+          "tag": "Mohansai Ande",
+          "prescreening": 1,
+          "technical_l1": 0,
+          "technical_l2": 0,
+          "ec_fitment": 0,
+          "project_fitment": 0,
+          "client_interview": 0,
+          "shortlisted": 0
+        },
+        {
+          "tag": "Unknown hr",
+          "prescreening": 1,
+          "technical_l1": 0,
+          "technical_l2": 1,
+          "ec_fitment": 0,
+          "project_fitment": 0,
+          "client_interview": 0,
+          "shortlisted": 0
+        }
+      ]
+    },
+    {
+      "title": "POS-ID Overview",
+      "searchPlaceholder": "Search by POS-ID",
+      "primaryColor": "#00979c",
+      "columns": [
+        { "label": "POS-ID", "field": "pos_id" },
+        { "label": "Count", "field": "count" }
+      ],
+      "rows": [
+        { "pos_id": "pos-1019", "count": 11 },
+        { "pos_id": "pos-1020", "count": 6 }
+      ]
+    }
+  ],
+
+  "TotalCount" :
+  [
+    {
+      "type": "doughnut",
+      "title": "Total RRF Count",
+      "labels": ["App", "Cloud", "Data"],
+      "data": [17, 2, 1],
+      "colors": ["#cfe2ff", "#b6f4ec", "#b6e7ff"],
+      "legendDisplay": true,
+      "legendPosition": "bottom",
+      "centerText": "17",
+      "centerTextLabel": "Total Applicants"
+    },
+    {
+      "type": "bar",
+      "title": "L1 iMocha Results",
+      "labels": ["App", "Cloud", "Data"],
+      "data": [15, 3, 2],
+      "colors": ["#cfe2ff", "#b6f4ec", "#b6e7ff"],
+      "legendDisplay": true,
+      "legendPosition": "bottom",
+      "centerText": "17",
+      "centerTextLabel": "Total Applicants"
+    }
+  ],
+
+  "ByRole": [
+    {
+      "icon": "\ud83d\udcbb",
+      "roleName": "Cloud Native Application Engineer - Backend",
+      "labels": ["Full-time", "Remote"],
+      "count": 5,
+      "loading": false
+    },
+    {
+      "icon": "\ud83c\udf70",
+      "roleName": "Cloud Native Application Engineer - Frontend",
+      "labels": ["Full-time", "Remote"],
+      "count": null,
+      "loading": true
+    },
+    {
+      "icon": "\ud83d\udd27",
+      "roleName": "LCNC Platform Engineer",
+      "labels": ["Contract", "Hybrid"],
+      "count": null,
+      "loading": true
+    },
+    {
+      "icon": "\ud83d\udd17",
+      "roleName": "Integration Engineer",
+      "labels": ["Full-time", "Remote"],
+      "count": null,
+      "loading": true
+    }
+  ],
+
+  "Recruit":[
+    {
+      "ECname": "Cloud EC", "icon":"CloudIcon", "link":"/recruit/cloud-ec"  , "iconColor":"#6C63FF","iconSize":"40px", "fontSize":18, "fontWeight":"bold",
+      "data":[
+        {
+          "title":"DevOps Engineer",
+          "description": "Responsible for overseeing the code releases, combining an understanding of both engineering and coding. DevOps engineers work with various departments to create and develop systems within a company.",
+          "options":["Azure","AWS"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Platform Engineer",
+          "description": "Innovates and builds the underlying systems that power application development and deployment. Focuses on optimizing platform performance and scalability.",
+          "options":["Azure","AWS"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Cloudops Engineer",
+          "description": "Manages cloud infrastructure and services, ensuring smooth deployment, support, and monitoring of cloud environments. Works on automating cloud operations and optimizing costs.",
+          "options":["Azure","AWS"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Site Reliability Engineer",
+          "description": "Works to create a bridge between development and IT operations, focusing on creating scalable and highly reliable software systems. Monitors system performance and ensures service availability.",
+          "options":["Azure","AWS"],
+          "select":["Junion","Senior","Lead"]
+        }
+        
+      ]
+    },
+    {
+      "ECname": "App EC", "icon":"SettingsIcon", "link":"/recruit/app-ec", "iconColor":"#6C63FF","iconSize":"40px", "fontSize":"18px", "fontWeight":"bold",
+      "data":[
+        {
+          "title":"Cloud Native Application Engineer - Backend",
+          "description": "Responsible for overseeing the code releases, combining an understanding of both engineering and coding. DevOps engineers work with various departments to create and develop systems within a company.",
+          "options":[".Net","Java","NodeJS","Python"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Cloud Native Application Engineer - Front End",
+          "description": "Innovates and builds the underlying systems that power application development and deployment. Focuses on optimizing platform performance and scalability.",
+          "options":[".Angular","React"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"LCNC Platform Engineer",
+          "description": "Manages cloud infrastructure and services, ensuring smooth deployment, support, and monitoring of cloud environments. Works on automating cloud operations and optimizing costs.",
+          "options":["Mendix","UI Mendix"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Integration Engineer",
+          "description": "Works to create a bridge between development and IT operations, focusing on creating scalable and highly reliable software systems. Monitors system performance and ensures service availability.",
+          "options":["IBM Integration Bus","IBM Data Power", "MuleSoft", "SAG web methods"],
+          "select":["Junion","Senior","Lead"]
+        }
+        
+      ]
+      
+    },
+    {
+      "ECname": "Data EC", "icon":"StorageIcon", "link":"/recruit/data-ec", "iconColor":"#6C63FF","iconSize":"40px", "fontSize":"18px", "fontWeight":"bold",
+      "data":[
+        {
+          "title":"Data Engineer",
+          "description": "Designing and implementing ETL processes and data pipelines for analytics, requiring expertise in SQL, Python, , PySpark, any ETL and cloud technologies",
+          
+          "select":["AWS Glue","Hadoop","ODI", "PL/SQL"]
+        },
+        {
+          "title":"Data - BI Visualization Engineer",
+          "description": "Creates interactive dashboards and reports using BI tools, turning data into actionable insights. Optimizes data models, ensures data accuracy, and collaborates with stakeholders to meet business needs",
+          
+          "select":["PowerBI","Tableau","WebFocus"]
+        },
+        {
+          "title":"Data Modeller",
+          "description": "Designs and maintains data models that define the structure and relationships of organizational data to support analytics and business processes. Collaborates with data engineers and stakeholders to ensure data quality, integration, and adherence to modelling standards."
+         
+        },
+        {
+          "title":"Data Analyst",
+          "description": "Interprets complex data sets to provide insights that drive business decisions. Collects, processes, and analyses data using statistical tools, creating reports and visualizations to communicate findings effectively to stakeholders."
+          
+        }
+        
+      ]
+    },
+    {
+      "ECname": "Core EC", "icon":"MemoryIcon", "link":"/recruit/core-ec", "iconColor":"#6C63FF","iconSize":"40px", "fontSize":"18px", "fontWeight":"bold",
+      "data":[
+        {
+          "title":"Cloud Native Application Engineer - Backend",
+          "description": "Responsible for overseeing the code releases, combining an understanding of both engineering and coding. DevOps engineers work with various departments to create and develop systems within a company.",
+          "options":[".Net","Java","NodeJS","Python"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Cloud Native Application Engineer - Front End",
+          "description": "Innovates and builds the underlying systems that power application development and deployment. Focuses on optimizing platform performance and scalability.",
+          "options":[".Angular","React"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"LCNC Platform Engineer",
+          "description": "Manages cloud infrastructure and services, ensuring smooth deployment, support, and monitoring of cloud environments. Works on automating cloud operations and optimizing costs.",
+          "options":["Mendix","UI Mendix"],
+          "select":["Junion","Senior","Lead"]
+        },
+        {
+          "title":"Integration Engineer",
+          "description": "Works to create a bridge between development and IT operations, focusing on creating scalable and highly reliable software systems. Monitors system performance and ensures service availability.",
+          "options":["IBM Integration Bus","IBM Data Power", "MuleSoft", "SAG web methods"],
+          "select":["Junion","Senior","Lead"]
+        }
+        
+      ]
+    }
+  ]
+
+
+  
+
+
+}

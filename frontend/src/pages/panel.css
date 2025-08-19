@@ -1,0 +1,439 @@
+/* body,
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #e6e6fa, #daf7a6);
+  color: #e0e0e0;
+  height: 100%;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  
+  .panel-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: #e0e0e0;
+  }
+  
+  .calendar-container {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    height: fit-content;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+  }
+  
+  .day-header {
+    color: #999;
+    font-size: 12px;
+    padding: 5px;
+  }
+  
+  .day {
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .day.active {
+    background-color: #e8f4ff;
+    color: #0099ff;
+  }
+  
+  .day.selected {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .day.other-month {
+    color: #ccc;
+  }
+  
+  .btn_prevnext {
+    cursor: pointer;
+    font-size: 40px;
+    color: black;
+    border: none;
+    background: transparent;
+    margin-top: -10px;
+  }
+  
+  .meeting-date {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .meeting-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  .feedback-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  .meeting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .meeting-title {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .meeting-location {
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .attendees {
+    display: flex;
+    gap: 5px;
+    margin: 15px 0;
+  }
+  
+  .attendee {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-resume {
+    background: #4caf50;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-resume a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn-mocha {
+    background: #2196f3;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-mocha a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn-feedback {
+    background: #ff9800;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .company-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+  }
+  
+  select {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .day-names div {
+    font-weight: normal;
+    color: #666;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .main-content.shift {
+    margin-left: 110px;
+  }
+  
+  .meeting-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    position: absolute;
+    top: 65px;
+    left: -250px;
+    width: 200px;
+    height: 80%;
+    background-color: white;
+    color: black;
+    overflow-y: hidden;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: rgb(196, 196, 196);
+  }
+  
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  #toggle-sidebar-btn {
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: none;
+    width: 80px;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: -15px;
+  }
+  
+  .meeting-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .meeting-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-teams {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    flex-direction: column;
+    background-color: #6264a7;
+    border: none;
+  }
+  
+  .btn-teams a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .btn-teams img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
+  .btn-teams:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .teams-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .join-link {
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 1% auto;
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 80%;
+    height: 90%;
+  }
+  
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  iframe {
+    border: none;
+  }
+  
+  .custom-feedback-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .custom-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 900px;
+    max-height: 90%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .custom-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+  }

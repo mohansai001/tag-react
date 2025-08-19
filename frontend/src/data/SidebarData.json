@@ -1,0 +1,16 @@
+{
+  "dashboard": [
+    { "text": "Dashboard", "icon": "DashboardIcon", "link":"/recruit"  },
+    { "text": "Upload RRF", "icon": "CloudUploadIcon", "link":"/recruit"  },
+    { "text": "Recruit", "icon": "GroupIcon", "link":"/recruit" },
+    { "text": "RRF Tracking", "icon": "ListAltIcon", "link":"/recruit" },
+    { "text": "GT's Prescreening", "icon": "AssignmentIcon", "link":"/recruit" },
+    { "text": "My Interviews", "icon": "PeopleAltIcon", "link":"/recruit" }
+  ],
+  "recruit": [
+    { "text": "Dashboard", "icon": "HomeIcon", "link":"/" },
+    { "text": "Recruit", "icon": "Groups2Icon" , "link":"/recruit"  },
+    { "text": "RRF Tracking", "icon": "FormatListBulletedIcon", "link":"/recruit"   },
+    { "text": "GT's Prescreening", "icon": "FormatListBulletedIcon", "link":"/recruit"   }
+  ]
+}

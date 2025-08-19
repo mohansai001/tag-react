@@ -1,0 +1,271 @@
+/* body,
+html {
+  margin: 0;
+  padding: 10px;
+  background: linear-gradient(120deg, #e6e6fa, #daf7a6);
+  color: #000;
+  height: fit-content;
+  font-family: Arial, sans-serif;
+} */
+
+.form-container {
+  width: 96%;
+  margin: 0 auto;
+  border: 1px solid #333;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.candidate-container {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  max-width: 60%;
+}
+
+.candidate-info {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.candidate-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-container {
+  width: 350px;
+  height: 350px;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Fit the image inside the box while maintaining aspect ratio */
+  display: block;
+  object-position: center;
+  /* Keep image centered */
+}
+
+.upload-label {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+.experience-table {
+  border-radius: 5px;
+}
+
+th,
+td {
+  border: 0.5px solid #888888;
+  padding: 8px;
+  text-align: left;
+  width: 33.33%;
+}
+
+th {
+  background-color: #bbbbbb;
+  color: black;
+}
+
+.pre-screening {
+  background-color: #bbbbbb;
+  color: black;
+}
+
+.shortlisted {
+  background-color: #90ee90;
+}
+
+.not-shortlisted {
+  background-color: #ffb6c1;
+}
+
+.experience-table th {
+  background-color: #bbbbbb;
+  color: black;
+}
+
+table.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 0.5px solid #888888;
+  padding: 8px;
+  text-align: left;
+  width: 25%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.feedback-section {
+  margin-top: 25px;
+}
+
+.feedback-section-text {
+  margin-top: 5px;
+  height: 100px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.feedback-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedback-section textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  min-height: 250px;
+  resize: vertical;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: 1px solid #888888;
+}
+
+.result-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.result-section label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.result-select {
+  padding: 8px;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3sease;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 92%;
+  padding: 0.75rem;
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3sease;
+  font-family: Arial, sans-serif;
+}
+
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3sease;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.styled-dropdown {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #888888;
+  background-color: #fff;
+  width: 100%;
+  /* appearance: none; */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.styled-dropdown option {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.styled-dropdown option:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.styled-dropdown option:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.styled-dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.green-background {
+  background-color: green;
+  color: white;
+}
+
+.red-background {
+  background-color: red;
+  color: white;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  z-index: 9999;
+}
+
+.toast.show {
+  display: block;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.error {
+  background-color: #f44336;
+}

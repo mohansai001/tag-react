@@ -1,0 +1,23 @@
+/* Import global CSS */
+@import url('./styles/global.css');
+
+/* Global styles for TAG React App */
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #e6e6fa, #daf7a6);
+  color: #e0e0e0;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+#root {
+  min-height: 100vh;
+}
