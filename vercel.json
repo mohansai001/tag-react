@@ -1,16 +1,17 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/server.js", "use": "@vercel/node" },
+    { "src": "api/*.js", "use": "@vercel/node" },
     { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/server.js" },
+    { "src": "/api/get-shortlisted-candidates", "dest": "/api/get-shortlisted-candidates.js" },
+    { "src": "/api/getAllCandidateEmails", "dest": "/api/getAllCandidateEmails.js" },
+    { "src": "/api/panel-candidates-info", "dest": "/api/panel-candidates-info.js" },
+    { "src": "/api/(.*)", "dest": "/api/health.js" },
     { "src": "/static/(.*)", "dest": "/frontend/static/$1" },
     { "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg))", "dest": "/frontend/$1" },
     { "src": "/(.*)", "dest": "/frontend/index.html" }
   ]
 }
-  
-
   
