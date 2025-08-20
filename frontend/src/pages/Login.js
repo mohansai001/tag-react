@@ -19,7 +19,7 @@ const Login = () => {
     auth: {
       clientId: "ed0b1bf7-b012-4e13-a526-b696932c0673",
       authority: "https://login.microsoftonline.com/13085c86-4bcb-460a-a6f0-b373421c6323",
-      redirectUri: "http://localhost:3000",
+      redirectUri: "https://demotag.vercel.app",
     },
   };
 
