@@ -1,16 +1,16 @@
-// api/server.js
-const express = require('express');
-const cors = require('cors');
+module.exports = (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
+  res.status(200).json({ success: true, message: 'API working', data: [] });
+};
 
-const app = express();
-
-// CORS configuration
-app.use(cors({
-  origin: ['https://demotag.vercel.app', 'http://localhost:3000'],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -27,6 +27,14 @@ app.get('/api/get-shortlisted-candidates', (req, res) => {
 
 app.get('/api/getAllCandidateEmails', (req, res) => {
   res.json({ success: true, emails: [] });
+});
+
+app.get('/api/getCandidateData', (req, res) => {
+  res.json({ success: true, data: {} });
+});
+
+app.get('/api/final-prescreening', (req, res) => {
+  res.json({ success: true, prescreening: {}, feedback: [], l2Technical: {} });
 });
 
 // Catch all API routes
