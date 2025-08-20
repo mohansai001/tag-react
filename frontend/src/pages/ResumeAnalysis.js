@@ -290,7 +290,7 @@ function ResumeAnalysis() {
       } = sessionData;
  
       try {
-        const initialRes = await fetch("http://localhost:3001/api/get/candidate-info", { signal });
+        const initialRes = await fetch("https://demotag.vercel.app/api/get/candidate-info", { signal });
         const initialData = await initialRes.json();
         let existingCandidates = initialData.data || [];
  
@@ -342,7 +342,7 @@ function ResumeAnalysis() {
               content,
             };
  
-            const saveRes = await fetch("http://localhost:3001/api/add-candidate-info", {
+            const saveRes = await fetch("https://demotag.vercel.app/api/add-candidate-info", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(candidateDetails),
@@ -444,7 +444,7 @@ function ResumeAnalysis() {
     if (!candidateId) return;
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3001/api/get/candidate-evaluation/${candidateId}`);
+      const response = await fetch(`https://demotag.vercel.app/api/get/candidate-evaluation/${candidateId}`);
       const result = await response.json();
       if(result.success) {
         setSelectedEvaluation(result.data);
