@@ -74,7 +74,7 @@ const Candidates = () => {
       }
 
       const response = await fetch(
-        `http://localhost:3001/api/get-next-round?rrf_id=${rrf_id}&recruitment_phase=${encodeURIComponent(
+        `https://demotag.vercel.app/api/get-next-round?rrf_id=${rrf_id}&recruitment_phase=${encodeURIComponent(
           recruitment_phase
         )}`
       );
@@ -110,7 +110,7 @@ const Candidates = () => {
   const fetchCandidatesInfo = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3001/api/get-shortlisted-candidates");
+      const response = await fetch("https://demotag.vercel.app/api/get-shortlisted-candidates");
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`);
       }
@@ -154,7 +154,7 @@ const Candidates = () => {
   const getCandidateEmailStatus = async (candidateEmail) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/api/get-email-status?candidate_email=${encodeURIComponent(
+        `https://demotag.vercel.app/api/get-email-status?candidate_email=${encodeURIComponent(
           candidateEmail
         )}`
       );
@@ -172,7 +172,7 @@ const Candidates = () => {
   const updateEmailStatus = async (candidateEmail, status) => {
     try {
       const response = await fetch(
-        "http://localhost:3001/api/update-email-status",
+        "https://demotag.vercel.app/api/update-email-status",
         {
           method: "POST",
           headers: {
@@ -450,7 +450,7 @@ const Candidates = () => {
         meetingLink,
       });
 
-      const statusUpdateResponse = await fetch("http://localhost:3001/api/update-status", {
+      const statusUpdateResponse = await fetch("https://demotag.vercel.app/api/update-status", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -497,7 +497,7 @@ const Candidates = () => {
   };
 
   const fetchPanelEmails = (domain) => {
-    fetch(`http://localhost:3001/api/get-panel-emails?domain=${domain}`)
+    fetch(`https://demotag.vercel.app/api/get-panel-emails?domain=${domain}`)
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {
@@ -527,7 +527,7 @@ const Candidates = () => {
 
     document.getElementById("statusMessage").innerText = "Processing, please wait...";
 
-    const apiUrl = `http://localhost:3001/api/callTestAttempts/${selectedEC}`;
+    const apiUrl = `https://demotag.vercel.app/api/callTestAttempts/${selectedEC}`;
 
     try {
       const response = await fetch(apiUrl, {
