@@ -46,7 +46,7 @@ const FinalFeedback = () => {
         const fetchEmails = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch("http://localhost:3001/api/getAllCandidateEmails");
+                const response = await fetch("https://demotag.vercel.app/api/getAllCandidateEmails");
                 const data = await response.json();
                 
                 if (data.error) {
@@ -112,7 +112,7 @@ const FinalFeedback = () => {
             let l2Result = "";
 
             // Step 1: Fetch candidate basic data
-            const candidateResponse = await fetch(`http://localhost:3001/api/getCandidateData?candidateEmail=${selectedEmail}`);
+            const candidateResponse = await fetch(`https://demotag.vercel.app/api/getCandidateData?candidateEmail=${selectedEmail}`);
             const candidateData = await candidateResponse.json();
 
             if (candidateData.error) {
@@ -136,7 +136,7 @@ const FinalFeedback = () => {
             imochaScore = candidateData.l_1_score;
 
             // Step 2: Fetch prescreening & feedback data
-            const feedbackResponse = await fetch(`http://localhost:3001/api/final-prescreening?candidateEmail=${selectedEmail}&candidateId=${candidateData.id}&position=${candidateData.role}`);
+            const feedbackResponse = await fetch(`https://demotag.vercel.app/api/final-prescreening?candidateEmail=${selectedEmail}&candidateId=${candidateData.id}&position=${candidateData.role}`);
             const feedbackData = await feedbackResponse.json();
 
             if (feedbackData.message) {
