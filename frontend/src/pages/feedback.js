@@ -51,11 +51,11 @@ const FeedbackForm = () => {
             setCandidateEmail(candidateEmailParam);
             setRoundDetails(roundDetailsParam);
 
-            fetch(`http://localhost:3001/api/get-feedbackform?candidateEmail=${candidateEmailParam}&roundDetails=${roundDetailsParam}`)
+            fetch(`https://demotag.vercel.app/api/get-feedbackform?candidateEmail=${candidateEmailParam}&roundDetails=${roundDetailsParam}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.error) {
-                        fetch(`http://localhost:3001/api/getCandidateData?candidateEmail=${candidateEmailParam}`)
+                        fetch(`https://demotag.vercel.app/api/getCandidateData?candidateEmail=${candidateEmailParam}`)
                             .then(response => response.json())
                             .then(candidateData => {
                                 if (candidateData.error) {
@@ -226,7 +226,7 @@ const FeedbackForm = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3001/api/submitFeedback', {
+            const response = await fetch('https://demotag.vercel.app/api/submitFeedback', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
